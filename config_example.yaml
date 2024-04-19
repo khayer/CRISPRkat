@@ -1,0 +1,33 @@
+groups:
+  # Group names can only consist of word characters (letter, number, underscore)
+  # NO DOTS 
+  day0_unt: 
+    - d0unt_rep1
+    - d0unt_rep2
+  sample_unt: 
+    - sample_unt_rep_1
+    - sample_unt_rep_2
+  sample_treatment1: 
+    - sample_treatment1_rep_1
+    - sample_treatment1_rep_2
+  sample_treatment2:
+    - sample_treatment2_rep_1
+    - sample_treatment2_rep_2
+baseline: day0_unt
+day_zero: d0unt_rep1,d0unt_rep2
+control_postfix: unt
+sgRNA:
+    adapter: AAACACCG
+    length: 20
+    index_fa: /home/hayerk/weitzman_lab/GeCKO_screen/GeCKO_index/sgrna_design_fixed.fa
+    bowtie2_index: index/bowtie2_sgrna_design_fixed
+    index_mageck: index/lib.csv
+    star_chip: index/stars.txt
+tools:
+    bowtie2: tools/bowtie2
+    Samtools:  tools/samtools
+    Regtools: tools/regtools
+    bedGraphToBigWig: tools/bedGraphToBigWig
+    bedtools: tools/bedtools
+single_end: False
+read_length: 100
